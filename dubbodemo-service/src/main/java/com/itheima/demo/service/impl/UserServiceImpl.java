@@ -12,4 +12,8 @@ public class UserServiceImpl implements UserService {
 		return "String";
 	}
 
+	public static void main(String[] args) {
+		System.out.println("111");
+	}
+
 }
