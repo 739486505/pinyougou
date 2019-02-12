@@ -19,4 +19,8 @@ public class UserController {
 	public String showName() {
 		return service.getName();
 	}
+
+	public static void main(String[] args) {
+		System.out.println("第三次修改");
+	}
 }
