@@ -16,16 +16,20 @@
     <!--页面拦截规则-->
     <http use-expressions="false">
         <intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER"></intercept-url>
-        <form-login login-page="/login.html" login-processing-url="/admin/index.html"
+        <form-login login-page="/login.html" login-processing-url="/login.do"
+                    default-target-url="/admin/index.html"
                     authentication-failure-forward-url="/login.html" always-use-default-target="true"/>
-    </http>
                     <!--always-use-default-target：指定了是否在身份验证通过后总是跳转到 default-target-url 属性指定的 URL。-->
+        <logout/>
 
-    <csrf disabled="true"></csrf>
+        <csrf disabled="true"></csrf>
 
-    <headers>
-        <frame-options policy="SAMEORIGIN"/>
-    </headers>
+        <headers>
+            <frame-options policy="SAMEORIGIN"/>
+        </headers>
+
+    </http>
+
 
     <!--认证管理器-->
     <authentication-manager>
