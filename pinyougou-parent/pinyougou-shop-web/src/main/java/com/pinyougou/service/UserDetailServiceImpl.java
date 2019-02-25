@@ -25,7 +25,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("经过了此方法");
+        System.out.println("pass");
         List<GrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority("ROLE_SELLER"));
         TbSeller seller = sellerService.findOne(username);

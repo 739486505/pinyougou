@@ -37,7 +37,7 @@
     <!--认证管理器-->
     <authentication-manager>
         <authentication-provider user-service-ref="userDetailService">
-           <!-- <password-encoder ref="bCryptPasswordEncoder"></password-encoder>-->
+            <password-encoder ref="bCryptPasswordEncoder"></password-encoder>
         </authentication-provider>
     </authentication-manager>
 
